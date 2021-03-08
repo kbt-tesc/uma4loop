@@ -7,6 +7,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
+import { updateUmaId } from "../local-storage-service/local-storage-service.js";
+
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
@@ -20,7 +22,8 @@ const useStyles = makeStyles(theme => ({
 export default function UmaSelector({
   parentSelectedUmaId,
   setUmaId,
-  formLabel
+  formLabel,
+  localUmaKey
 }) {
   const classes = useStyles();
 
@@ -29,7 +32,9 @@ export default function UmaSelector({
   const [selectUmaId, setSelectUmaId] = useState(parentSelectedUmaId);
 
   const handleUmaChange = event => {
-    setSelectUmaId(event.target.value);
+    const selectId = event.target.value;
+    updateUmaId(localUmaKey, selectId);
+    setSelectUmaId(selectId);
   };
 
   useEffect(() => {
@@ -46,9 +51,13 @@ export default function UmaSelector({
           value={selectUmaId}
           onChange={handleUmaChange}
         >
-          <MenuItem value={-1}>none</MenuItem>
+          <MenuItem key={-1} value={-1}>
+            none
+          </MenuItem>
           {list.map(element => (
-            <MenuItem value={element.id}>{element.name}</MenuItem>
+            <MenuItem key={element.id} value={element.id}>
+              {element.name}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

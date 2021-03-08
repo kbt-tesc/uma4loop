@@ -68,19 +68,19 @@ export default function UmaTrainingGroup({
       <p className={classes.label}>{label}</p>
       <Grid className={classes.grid} container>
         <Grid className={classes.gridChild} item xs={6}>
-          <Paper className={[classes.paper, classes.uma1container]}>
+          <Paper className={`${classes.paper} ${classes.uma1container}`}>
             <p className={classes.parentLabel}>継承元1</p>
             {getUmaNameById(trainingUmaId1)}
           </Paper>
         </Grid>
         <Grid className={classes.gridChild} item xs={6}>
-          <Paper className={[classes.paper, classes.uma2container]}>
+          <Paper className={`${classes.paper} ${classes.uma2container}`}>
             <p className={classes.parentLabel}>継承元2</p>
             {getUmaNameById(trainingUmaId2)}
           </Paper>
         </Grid>
         <Grid className={classes.gridChild} item xs={12}>
-          <Paper className={[classes.paper, classes.uma3container]}>
+          <Paper className={`${classes.paper} ${classes.uma3container}`}>
             <p className={classes.parentLabel}>育成</p>
             {getUmaNameById(trainingUmaId3)}
           </Paper>

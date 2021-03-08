@@ -7,6 +7,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
+import { initializeLocalStorage } from "./local-storage-service/local-storage-service.js";
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -22,6 +24,8 @@ const useStyles = makeStyles(theme => ({
 export default function App() {
   const classes = useStyles();
 
+  initializeLocalStorage();
+
   return (
     <div>
       <AppBar position="static">
@@ -31,7 +35,7 @@ export default function App() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <div class="umaLoopContainer">
+      <div className="umaLoopContainer">
         <UmaSelectorGroup />
       </div>
     </div>
