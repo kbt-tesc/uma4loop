@@ -1,0 +1,8 @@
+.formGroup {
+  display: flex;
+}
+
+.umaTainingContainer {
+  display: flex;
+  gap: 1em;
+}
