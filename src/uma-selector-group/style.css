@@ -2,7 +2,14 @@
   display: flex;
 }
 
-.umaTainingContainer {
+.umaTrainingFlex {
+  width: 100%;
   display: flex;
-  gap: 1em;
+  flex-grow: 1;
+  gap: 0.5em;
+}
+
+.umaTrainingGroup {
+  align-items: center;
+  justify-content: stretch;
 }

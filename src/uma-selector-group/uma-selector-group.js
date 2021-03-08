@@ -42,29 +42,33 @@ export default function App() {
         />
       </div>
 
-      <div class="umaTrainingGroup">
-        <div class="umaTainingContainer">
+      <div class="umaTrainingContainer">
+        <div class="umaTrainingFlex">
           <UmaTrainigGroup
+            class="umaTrainingGroup"
             label="1回目"
             trainingUmaId1={umaId1}
             trainingUmaId2={umaId4}
             trainingUmaId3={umaId2}
           />
           <UmaTrainigGroup
+            class="umaTrainingGroup"
             label="2回目"
             trainingUmaId1={umaId1}
             trainingUmaId2={umaId2}
             trainingUmaId3={umaId3}
           />
         </div>
-        <div class="umaTainingContainer">
+        <div class="umaTrainingFlex">
           <UmaTrainigGroup
+            class="umaTrainingGroup"
             label="3回目"
             trainingUmaId1={umaId2}
             trainingUmaId2={umaId3}
             trainingUmaId3={umaId4}
           />
           <UmaTrainigGroup
+            class="umaTrainingGroup"
             label="4回目"
             trainingUmaId1={umaId3}
             trainingUmaId2={umaId4}
